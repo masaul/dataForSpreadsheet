@@ -33,6 +33,10 @@ function doPost (e) {
       .createTextOutput(JSON.stringify({ 'result': 'success', 'row': nextRow }))
       .setMimeType(ContentService.MimeType.JSON)
   }
+  
+  
+  
+  
 
   catch (e) {
     return ContentService
@@ -62,3 +66,18 @@ function doPost (e) {
   })
 </script>
 
+
+kode const scriptURL = '<SCRIPT URL>', urlnya diganti dengan deploy yang dibuat tadi yang bagian web app sehingga menjadi
+const scriptURL = 'https://script.google.com/macros/s/AKfycbzpOSQY_k0gQynDhqGld_vK_dr2y7gc-qtEexQAZ1Nw_LayO5EvkHWTC0Hsj2niKpvB/exec'
+
+
+kode const form = document.forms['submit-to-google-sheet'], namanya harus sama dengan yang ada dibagian <form>. sehingga menjadi
+const form = document.forms['submit-to-google-sheet'] menjadi <form name='submit-to-google-sheet'>
+
+setiap name harus sama seperti yang ada di row spreadsheet. contohnya name="nama", name="pesan", name="email".
+
+# mencari bentuk loading : https://getbootstrap.com/docs/5.0/components/spinners/
+
+
+# fungsi d-none untuk menhilangkan.
+# jika ada d-none. terus dipanggil maka akan muncul.
